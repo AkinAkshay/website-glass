@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App | Akshay Akin</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a9c8e14216.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!-- for color gradient -->
+    <!-- <span class="color"></span>
+    <span class="color"></span>
+    <span class="color"></span>
+    <span class="color"></span> -->
+    
+    <div class="container">
+
+        {% block body %}
+        <!-- extended content comes here -->
+        {% endblock body %}
+    
+    </div>
+
+    <!-- for tilt effect -->
+    <script src="{{url_for('static', filename='vanilla-tilt.js')}}"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".container"), {
+            max: 1,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.1
+        });
+    </script>
+
+    <!-- JS -->
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>

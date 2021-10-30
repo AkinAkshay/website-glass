@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    background: #161623;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+a{
+    color: inherit;
+}
+
+/* .color{
+    position: absolute;
+    filter: blur(150px);
+}
+
+.color:nth-child(1){
+    top: 20px;
+    left: 20px;
+    background: pink;
+    width: 200px;
+    height: 200px;
+}
+
+.color:nth-child(2){
+    bottom: 20px;
+    left: 20px;
+    background: #fffd87;
+    width: 200px;
+    height: 200px;
+}
+
+.color:nth-child(3){
+    bottom: 20px;
+    right: 20px;
+    background: #fffd87;
+    width: 300px;
+    height: 300px;
+}
+
+.color:nth-child(4){
+    top: 20px;
+    right: 20px;
+    background: pink;
+    width: 300px;
+    height: 300px;
+} */
+
+.container{
+    margin-top: 2vh;
+    padding: 10px;
+    border-radius: 20px;
+    width: 90vw;
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* navbar */
+
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+}
+
+.glasspocket {
+    position: absolute;
+    /* border */
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    /* size */
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 93vh;
+    z-index: 2;
+    /* background */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+.item {
+    /* text color */
+    color: white;
+    font-size: 50px;
+    /* backgound */
+    background: rgba(22, 22, 35, 0.8);
+    /* border */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    /* display */
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    right: 0;
+    overflow: hidden;
+    /* animation */
+    transition: right 0.5s, z-index 0s, transform 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s;
+
+}
+
+.item:hover {
+    color: skyblue;
+    transition-delay: 0s, 0.5s, 0.5s;
+    right: -70px;
+    z-index: 3;
+    transform: translateX(-70px);
+}
+
+/* shine */
+.item:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.3s;
+}
+
+.item:hover:before{
+    transform: skewX(45deg) translate(-150px);
+}
+
+/* Footbar */
+
+.footmark{
+    border-bottom-right-radius: 20px;
+    margin: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    font-size: 20px;
+}
+
+/* Typewriter */
+.typewrite{
+    border-right: .15em solid orange;
+    animation: blink-caret .5s step-end infinite;
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
