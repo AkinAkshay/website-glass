@@ -19,7 +19,18 @@ port = os.getenv("PORT")
 # Landing page
 @app.route('/')
 def landing():
-    return render_template("index.html")
+    x = "This Page is under Developement."
+    return render_template("index.html", x=x)
+
+@app.route('/projects')
+def projects():
+    x = "Projects Page is under Developement."
+    return render_template("projects.html", x=x)
+
+@app.route('/bi')
+def bi():
+    x = "Business Intelligence and Visualization Page is under Developement."
+    return render_template("bi.html", x=x)
 
 
 
