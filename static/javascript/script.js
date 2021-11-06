@@ -1,3 +1,5 @@
+// Author : Akshay Akin
+
 // Typewriter
 
 var TxtType = function (el, toRotate, period) {
@@ -56,3 +58,5 @@ window.onload = function () {
     css.innerHTML = ".typewrite > .wrap {}";
     document.body.appendChild(css);
 };
+
+
